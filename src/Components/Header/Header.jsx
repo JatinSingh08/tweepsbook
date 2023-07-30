@@ -4,7 +4,7 @@ import logo from "../../../public/images/logo.png";
 const Header = () => {
   return (
     <div
-      className="flex items-center justify-between text-xl border  border-[#9CAEC8]  rounded-[100px] self-stretch px-10 py-4"
+      className="flex items-center justify-between text-xl border  border-[#9CAEC8]  rounded-[100px] self-stretch px-10 py-3"
       style={{
         backdropFilter: "blur(6px)",
         backgroundColor: "rgba(0, 0, 0, 0.48)",

@@ -21,9 +21,9 @@ export default function Home() {
           alt="gradient"
           draggable={false}
         />
-        <div className="flex flex-col gap-3 absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div>
-            <p className="text-[#54C0A0] font-medium text-center">
+        <div className="flex flex-col gap-1.5 absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="text-[#54C0A0] font-medium text-center">
+            <p>
               JET PROTOCOL
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
               <span className={styles.defi__text}>defi governance</span>
             </h2>
           </div>
-          <div className="text-xl w-full text-center">
+          <div className="text-xl w-full text-center mt-3">
             <p
               style={{
                 color: "rgba(255, 255, 255, 0.60)",
