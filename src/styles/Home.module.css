@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins&family=Ysabeau+Infant&display=swap');
+.main__text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  
+}
+.defi__text {
+  font-family: 'Playfair Display', serif;
+}
