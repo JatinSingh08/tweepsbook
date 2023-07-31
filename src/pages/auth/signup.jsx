@@ -30,7 +30,7 @@ const SignUp = () => {
 
 
   return (
-    <form className="h-full md:mx-1 z-10" onSubmit={handleSignUp}>
+    <form className=" fixed top-[0%] left-[40%]  md:mx-1 z-10" onSubmit={handleSignUp}>
       <div className="w-96  m-auto mt-24 md:mt-44 md:mx-auto h-auto p-4 rounded-lg drop-shadow-sm flex flex-col gap-3 ">
         <div>
           <div className="flex items-center justify-center m-auto">
