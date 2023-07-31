@@ -13,12 +13,13 @@ const Header = () => {
         backgroundColor: "rgba(0, 0, 0, 0.48)",
       }}
     >
-      <Link
-      href='/'
-      className="cursor-pointer"
-      >
-        <Image src={logo} width={150} height={150} alt="logo"
-        className="cursor-pointer"
+      <Link href="/" className="cursor-pointer">
+        <Image
+          src={logo}
+          width={150}
+          height={150}
+          alt="logo"
+          className="cursor-pointer"
         />
       </Link>
       <div>
@@ -37,9 +38,8 @@ const Header = () => {
             "0px 2px 2px 0px rgba(255, 255, 255, 0.48) inset, 0px -2px 2px 0px rgba(0, 0, 0, 0.48) inset",
         }}
       >
-        <Link href='/auth/login' className="cursor-pointer">
-          <button
-          >launch app</button>
+        <Link href="/auth/login" className="cursor-pointer">
+          <button>launch app</button>
         </Link>
       </div>
     </div>

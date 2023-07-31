@@ -1,15 +1,13 @@
-import React from 'react'
-import Header from '../Header/Header'
+import React from "react";
+import Header from "../Header/Header";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div className='py-10 px-24'>
+    <div className="py-10 px-24">
       <Header />
-      <main>
-        {children}  
-      </main>
+      <main>{children}</main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
