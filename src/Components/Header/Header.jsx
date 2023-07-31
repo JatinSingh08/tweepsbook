@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../../../public/images/logo.png";
+import { useRouter } from "next/router";
+import Link from "next/link";
 const Header = () => {
+  const router = useRouter();
   return (
     <div
       className="flex items-center justify-between text-xl border  border-[#9CAEC8]  rounded-[100px] self-stretch px-10 py-3"
@@ -10,9 +13,14 @@ const Header = () => {
         backgroundColor: "rgba(0, 0, 0, 0.48)",
       }}
     >
-      <div>
-        <Image src={logo} width={150} height={150} alt="logo" />
-      </div>
+      <Link
+      href='/'
+      className="cursor-pointer"
+      >
+        <Image src={logo} width={150} height={150} alt="logo"
+        className="cursor-pointer"
+        />
+      </Link>
       <div>
         <ul className="list-none flex gap-6">
           <li>products</li>
@@ -29,7 +37,10 @@ const Header = () => {
             "0px 2px 2px 0px rgba(255, 255, 255, 0.48) inset, 0px -2px 2px 0px rgba(0, 0, 0, 0.48) inset",
         }}
       >
-        <button>launch app</button>
+        <Link href='/auth/login' className="cursor-pointer">
+          <button
+          >launch app</button>
+        </Link>
       </div>
     </div>
   );

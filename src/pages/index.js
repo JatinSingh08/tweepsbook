@@ -3,16 +3,17 @@ import { Inter } from "next/font/google";
 import Header from "@/Components/Header/Header";
 import gradient from "../../public/images/gradient.png";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main
-      className={` min-h-screen py-10 px-24 flex-col items-center justify-center bg-[#000] ${inter.className}`}
+      className={` flex-col items-center justify-center bg-[#000] ${inter.className}`}
     >
-      <div>
+      {/* <div>
         <Header />
-      </div>
+      </div> */}
       <div className="flex -mt-12 items-center  justify-center relative">
         <Image
           src={gradient}
@@ -23,9 +24,7 @@ export default function Home() {
         />
         <div className="flex flex-col gap-1.5 absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="text-[#54C0A0] font-medium text-center">
-            <p>
-              JET PROTOCOL
-            </p>
+            <p>JET PROTOCOL</p>
           </div>
           <div className="flex flex-col items-center justify-center text-6xl max-w-6xl">
             <h2 className="text-center">
@@ -54,7 +53,9 @@ export default function Home() {
               "0px 2px 2px 0px rgba(255, 255, 255, 0.48) inset, 0px -2px 2px 0px rgba(0, 0, 0, 0.48) inset",
           }}
         >
-          <button>read docs</button>
+          <Link href="/movies">
+            <button>read docs</button>
+          </Link>
         </div>
         <div
           className="text-white py-2 px-5 flex items-center justify-center rounded-[100px] font-semibold"
