@@ -12,7 +12,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const { user, error } = await supabase.auth.signIn({
+    const { user, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
@@ -23,9 +23,16 @@ const Login = () => {
     }
     console.log({user})
 
-    router.push('/movies');
+    if(user) {
+      router.push('/movies');
+    }
   };
 
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut()
+  }
+  
   return (
     <form className=" flex fixed top-[0%] left-[40%] items-st justify-center md:mx-1 z-10 m-auto" onSubmit={handleLogin}>
       <div className="w-96  m-auto mt-24 md:mt-44 md:mx-auto h-auto p-4 rounded-lg drop-shadow-sm flex flex-col gap-3 ">
@@ -89,7 +96,13 @@ const Login = () => {
             </Link>
           </p>
         </div>
+        <button
+      onClick={() => signOut()}
+      >
+        Logout
+      </button>
       </div>
+
     </form>
   );
 };
