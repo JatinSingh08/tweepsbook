@@ -7,7 +7,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <div
-      className="flex items-center justify-between text-xl border  border-[#9CAEC8]  rounded-[100px] self-stretch px-10 py-3"
+      className="flex items-center justify-between text-xl  border  border-[#2a2a2c]  rounded-[100px] self-stretch px-10 py-3"
       style={{
         backdropFilter: "blur(6px)",
         backgroundColor: "rgba(0, 0, 0, 0.48)",
