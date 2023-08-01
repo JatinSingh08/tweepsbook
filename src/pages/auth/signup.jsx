@@ -1,13 +1,13 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
 import logo from "../../../public/images/logo.png";
-import { useRouter } from 'next/router';
-import supabase from '@/utils/supabase';
+import { useRouter } from "next/router";
+import supabase from "@/utils/supabase";
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
 
   const handleSignUp = async (e) => {
@@ -18,24 +18,24 @@ const SignUp = () => {
     });
 
     if (error) {
-      console.error('Sign-up error:', error.message);
+      console.error("Sign-up error:", error.message);
       return;
     }
     if (user) {
-      console.log('Sign-up successful:', user);
-      router.push('/auth/login');
+      console.log("Sign-up successful:", user);
     }
-
+    router.push("/auth/login");
   };
 
-
   return (
-    <form className=" fixed top-[0%] left-[40%]  md:mx-1 z-10" onSubmit={handleSignUp}>
+    <form
+      className=" fixed top-[0%] left-[40%]  md:mx-1 z-10"
+      onSubmit={handleSignUp}
+    >
       <div className="w-96  m-auto mt-24 md:mt-44 md:mx-auto h-auto p-4 rounded-lg drop-shadow-sm flex flex-col gap-3 ">
         <div>
           <div className="flex items-center justify-center m-auto">
             <Image src={logo} alt="logo" width={200} height={200} />
-            {/* <h1 className=" text-[#60A5FA] text-3xl font-bold">JetProtocol</h1> */}
           </div>
           <div className="flex items-start justify-center text-3xl mt-4 font-semibold">
             <p>Create new Account</p>
@@ -63,13 +63,6 @@ const SignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {/* <div className="flex items-center justify-between text-[#222222]">
-          <label htmlFor="remember">
-            Remember me
-            <input type="checkbox" />
-          </label>
-          <p>Forgot Password?</p>
-        </div> */}
         <button
           className=" bg-slate-900 mt-2 text-xl font-semibold text-slate-100 shadow-2xl rounded-lg px-2 py-3 active:scale-90 transition-all duration-100 ease-in-out "
           type="submit"
@@ -94,7 +87,7 @@ const SignUp = () => {
         </div>
       </div>
     </form>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

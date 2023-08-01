@@ -24,8 +24,8 @@ const Login = () => {
     console.log({user})
 
     if(user) {
-      router.push('/movies');
     }
+    router.push('/movies');
   };
 
 

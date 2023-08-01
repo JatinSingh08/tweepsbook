@@ -3,7 +3,7 @@ const seoDescription =
 
 const openGraphDescription = "Unlock your full potential as a content creator with our platform designed for international creators like Tim Ferris, Alex Lieberman, Nick Huber, and more. Join our global community and amplify your business and content growth on the internet. Discover tailored strategies, resources, and support to boost your online presence. Take your content to new heights with our empowering tools. Join us now!"
 
-export  { 
+export {
   seoDescription,
   openGraphDescription
 }

@@ -1,20 +1,10 @@
 import MovieCard from '@/Components/Movies/MovieCard';
+import { fetchMovies } from '@/utils/fetchMovies';
 import React from 'react'
 import { QueryClient, dehydrate, useQuery } from 'react-query';
 
-const api = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
-// const getMovies = async () => await (await fetch(api, {
-//   headers: {
-//     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWM2NTI3MGMxYmJhZmExNDUyNGVhNDQxNzQwNjJhOCIsInN1YiI6IjYyODBiOWU2ZGNmODc1MzM0ZTQ1N2NiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._ueveNAVwEPen0kwpg_VnaNg6iqUGA9av6BzNzHxzlg',
-//   }
-// }).json())
 
-const fetchMovies = () =>
-  fetch(api, {
-    headers: {
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWM2NTI3MGMxYmJhZmExNDUyNGVhNDQxNzQwNjJhOCIsInN1YiI6IjYyODBiOWU2ZGNmODc1MzM0ZTQ1N2NiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._ueveNAVwEPen0kwpg_VnaNg6iqUGA9av6BzNzHxzlg',
-    },
-  }).then((response) => response.json());
+
 const Movies = () => {
   const { data, isLoading, isFetching } = useQuery('movies', fetchMovies);
   console.log(data.results);

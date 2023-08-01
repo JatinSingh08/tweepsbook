@@ -89,7 +89,7 @@ export default function Home() {
                 "0px 2px 2px 0px rgba(255, 255, 255, 0.48) inset, 0px -2px 2px 0px rgba(0, 0, 0, 0.48) inset",
             }}
           >
-            <Link href="/movies">
+            <Link href="/auth/login">
               <button>read docs</button>
             </Link>
           </div>
